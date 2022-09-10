@@ -222,6 +222,9 @@ MonoBehaviour:
   limitPosZ: 0
   lerpVector: {x: 0, y: 0, z: 0}
   defaultVector: {x: 0, y: 0, z: 0}
+  m_currentInputY: {x: 0, y: 0, z: 0}
+  m_defaultInputY: {x: 0, y: 0, z: 0}
+  m_inputDefault: {x: 0, y: 0, z: 0}
 --- !u!1 &1080553397
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,6 +932,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40939734d1a49ad41b605f980f89f307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrab: 0
+  moveBack: 0
+  limitVectorX: 0
+  limitVectorY: 0
+  limitVectorZ: 0
+  limitPosX: 0
+  limitPosY: 0
+  limitPosZ: 0
+  lerpVector: {x: 0, y: 0, z: 0}
+  defaultVector: {x: 0, y: 0, z: 0}
 --- !u!1 &9063591874568672781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,7 +1547,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9064573182148325235}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

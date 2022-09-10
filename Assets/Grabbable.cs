@@ -26,7 +26,7 @@ public class Grabbable : MonoBehaviour
     public virtual void Start()
     {
         defaultVector = transform.position;
-        rigidbody = GetComponent<Rigidbody>();
+        //rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -44,15 +44,15 @@ public class Grabbable : MonoBehaviour
 
     public virtual void OnGrab()
     {
-        //transform.position = Vector3.Lerp(transform.position , lerpVector , 0.02f);
-        rigidbody.MovePosition(Vector3.Lerp(transform.position, lerpVector, 0.02f));
+        transform.position = Vector3.Lerp(transform.position , lerpVector , 0.02f);
+        //rigidbody.MovePosition(Vector3.Lerp(transform.position, lerpVector, 0.02f));
     }
 
     public virtual void DisGrab()
     {
         if (moveBack)
         {
-            //transform.position = Vector3.Lerp(transform.position , defaultVector , 0.02f);
+            transform.position = Vector3.Lerp(transform.position , defaultVector , 0.02f);
             //rigidbody.velocity = Vector3.Lerp(transform.position , defaultVector , 0.02f);
         }
     }
@@ -67,7 +67,12 @@ public class Grabbable : MonoBehaviour
         isGrab = false;
     }
 
-    public virtual void SetLerpVector(Vector3 input)
+    public virtual void EnterGrab(Transform input)
+    {
+        
+    }
+
+    public virtual void SetLerpVector(Vector3 input , Quaternion inputRotate)
     {
         float inputX = input.x;
         float inputY = input.y;

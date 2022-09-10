@@ -2,19 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClockActor : MonoBehaviour
+public class ClockActor : Grabbable
 {
-    private LineRenderer lineRenderer;
-    // Start is called before the first frame update
-    void Start()
+    public override void Grab()
     {
-        lineRenderer = GetComponent<LineRenderer>();
+        base.Grab();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnGrab()
     {
-        lineRenderer.SetPosition(0 , transform.position);
-        lineRenderer.SetPosition(1 , transform.GetChild(0).transform.position);
+        base.OnGrab();
     }
+
+    public override void DisGrab()
+    {
+        base.DisGrab();
+    }
+
+    public override void UnGrab()
+    {
+        base.UnGrab();
+    }
+    
+    
 }
