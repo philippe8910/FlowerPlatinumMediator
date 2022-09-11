@@ -5299,8 +5299,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4835634682768818560, guid: 98558ef0c8db21a4ba745ffe2333e34f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98558ef0c8db21a4ba745ffe2333e34f, type: 3}
+--- !u!1 &680599958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4835634682301175551, guid: 98558ef0c8db21a4ba745ffe2333e34f, type: 3}
+  m_PrefabInstance: {fileID: 680599957}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &695874197
 GameObject:
   m_ObjectHideFlags: 0
@@ -14540,6 +14549,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1265919512, guid: c2e7a3e07bdba33408a2719471dea96f, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 680599958}
     - target: {fileID: 1265919512, guid: c2e7a3e07bdba33408a2719471dea96f, type: 3}
       propertyPath: levelName
       value: Demo1-5
