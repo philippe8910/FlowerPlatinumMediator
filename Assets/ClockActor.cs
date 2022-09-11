@@ -1,28 +1,53 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Events;
+using Project;
 using UnityEngine;
 
-public class ClockActor : Grabbable
+public class ClockActor : MonoBehaviour
 {
-    public override void Grab()
+    private RepairArea repairArea;
+
+    private string stateName;
+
+    [SerializeField] private Quaternion currentQuaternion , defaultQuaternion;
+
+    private void Start()
     {
-        base.Grab();
+        EventBus.Subscribe<EnterRepairAreaDetected>(OnEnterRepairAreaDetected);
     }
 
-    public override void OnGrab()
+    private void OnEnterRepairAreaDetected(EnterRepairAreaDetected obj)
     {
-        base.OnGrab();
+        var input = obj.repairArea;
+
+        repairArea = input;
+        stateName = obj.stateName;
     }
 
-    public override void DisGrab()
+    private void Update()
     {
-        base.DisGrab();
+        if (repairArea != null)
+        {
+            var dis = (Quaternion.Angle(transform.rotation, defaultQuaternion) / 180f);
+            repairArea.SetTime(dis);
+        }
     }
 
-    public override void UnGrab()
+    public void OnAttachedToHand()
     {
-        base.UnGrab();
+        defaultQuaternion = transform.rotation;
+        //Debug.Log("Attached Point!!!");
+
     }
+    
+    public void OnDetachedToHand()
+    {
+        defaultQuaternion = transform.rotation;
+        //Debug.Log("Detached Point!!!");
+    }
+    
     
     
 }

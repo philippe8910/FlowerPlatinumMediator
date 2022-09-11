@@ -105,6 +105,8 @@ namespace Valve.VR.InteractionSystem
 
         private Interactable interactable;
 
+        [SerializeField] private UnityEvent OnAttachedToHand, OnDetachedToHand;
+
 		//-------------------------------------------------
 		private void Freeze( Hand hand )
 		{
@@ -254,6 +256,8 @@ namespace Valve.VR.InteractionSystem
 				if ( hoverLock )
 				{
 					hand.HoverLock(interactable);
+					//Debug.Log("Grab On Hand!!!!");
+					OnAttachedToHand.Invoke();
 					handHoverLocked = hand;
 				}
 
@@ -270,6 +274,7 @@ namespace Valve.VR.InteractionSystem
 				if ( hoverLock )
 				{
 					hand.HoverUnlock(interactable);
+					OnDetachedToHand.Invoke();
 					handHoverLocked = null;
 				}
 
