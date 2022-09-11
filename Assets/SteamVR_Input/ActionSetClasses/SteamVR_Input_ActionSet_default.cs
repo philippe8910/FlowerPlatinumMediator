@@ -137,6 +137,14 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean StopTimeAction
+        {
+            get
+            {
+                return SteamVR_Actions.default_StopTimeAction;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get

@@ -7,6 +7,7 @@ using Project;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class CharacterStateAction : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class CharacterStateAction : MonoBehaviour
 
     [FoldoutGroup("WallCheckRayCast")] [SerializeField] private float wallCheckRayDistance;
 
-    private bool canClimb = true;
+    private bool canClimb = true , isStop;
 
     private GameObject anchor = null;
 
@@ -39,6 +40,8 @@ public class CharacterStateAction : MonoBehaviour
     private CharacterActor actor;
 
     private Vector2 inputVector2;
+
+    public Volume stopTimeCameraEffect;
 
     private PlayerControllerAction playerControllerAction;
     void Start()
@@ -49,6 +52,7 @@ public class CharacterStateAction : MonoBehaviour
         
         if(rightRay == null) rightRay = GameObject.Find("RightRay");
         if(leftRay == null) leftRay = GameObject.Find("LeftRay");
+        if (stopTimeCameraEffect == null) FindObjectOfType<Volume>();
         
         EventBus.Subscribe<JoystickInputDetected>(OnJoystickInputDetected);
     }
@@ -79,9 +83,21 @@ public class CharacterStateAction : MonoBehaviour
             transform.position = anchor.transform.position;
             Destroy(anchor);
         }
+        
+        if (playerControllerAction != null)
+        {
+            if (playerControllerAction.GetStopTimeAction())
+            {
+                isStop = !isStop;
+                stopTimeCameraEffect.gameObject.SetActive(isStop);
+                
+                EventBus.Post(new StopTimeDetected(isStop));
+                Debug.Log("StopTime");
+            }
+        }
 
-        Debug.Log("Right : " + GetRightSideClimbWallCheck());
-        Debug.Log("Left : " + GetLeftSideClimbWallCheck());
+        //Debug.Log("Right : " + GetRightSideClimbWallCheck());
+        //Debug.Log("Left : " + GetLeftSideClimbWallCheck());
         
 
         

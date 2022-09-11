@@ -5388,6 +5388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4835634682768818560, guid: 98558ef0c8db21a4ba745ffe2333e34f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98558ef0c8db21a4ba745ffe2333e34f, type: 3}
 --- !u!1 &695874197
@@ -6511,7 +6515,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &826764803
 GameObject:
@@ -11850,6 +11854,7 @@ MonoBehaviour:
   rightRay: {fileID: 22292106}
   leftRay: {fileID: 472698654}
   wallCheckRayDistance: 0.12
+  stopTimeCameraEffect: {fileID: 0}
 --- !u!114 &1322065939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15067,6 +15072,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1265919512, guid: c2e7a3e07bdba33408a2719471dea96f, type: 3}
+      propertyPath: levelName
+      value: Demo1-3
+      objectReference: {fileID: 0}
     - target: {fileID: 9029145543329236337, guid: c2e7a3e07bdba33408a2719471dea96f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -15117,24 +15126,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2e7a3e07bdba33408a2719471dea96f, type: 3}
---- !u!1 &1783843975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9029145543329236346, guid: c2e7a3e07bdba33408a2719471dea96f, type: 3}
-  m_PrefabInstance: {fileID: 1783843974}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1783843976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783843975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 008b35b2dadbebd45ade4df97e9172b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelName: 
 --- !u!1 &1789015916
 GameObject:
   m_ObjectHideFlags: 0
@@ -17940,7 +17931,7 @@ Transform:
   m_Children:
   - {fileID: 2477445474140003146}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &1879931697512961440
 GameObject:

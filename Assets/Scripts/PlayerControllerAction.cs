@@ -14,6 +14,8 @@ public class PlayerControllerAction : MonoBehaviour
     [SerializeField] private SteamVR_Action_Boolean jumpButton;
 
     [SerializeField] private SteamVR_Action_Boolean dropDoppelgangerAction;
+    
+    [SerializeField] private SteamVR_Action_Boolean stopTimeAction;
 
     public bool isComputer;
     // Start is called before the first frame update
@@ -58,5 +60,10 @@ public class PlayerControllerAction : MonoBehaviour
     public bool GetDropdropDoppelgangerAction()
     {
         return dropDoppelgangerAction.stateDown;
+    }
+
+    public bool GetStopTimeAction()
+    {
+        return stopTimeAction.stateDown;
     }
 }

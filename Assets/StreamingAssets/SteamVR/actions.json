@@ -66,6 +66,10 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/StopTimeAction",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
@@ -188,7 +192,8 @@
       "/actions/default/in/SnapTurnRight": "Snap Turn (Right)",
       "/actions/default/in/TouchPad": "TouchPad",
       "/actions/default/in/RunAction": "RunAction",
-      "/actions/default/in/JumpAction": "JumpAction"
+      "/actions/default/in/JumpAction": "JumpAction",
+      "/actions/default/in/StopTimeAction": "StopTimeAction"
     }
   ]
 }

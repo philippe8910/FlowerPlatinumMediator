@@ -9,7 +9,7 @@ public class ClockActor : MonoBehaviour
 {
     private RepairArea repairArea;
 
-    private string stateName;
+    private bool isGrab;
 
     [SerializeField] private Quaternion currentQuaternion , defaultQuaternion;
 
@@ -23,21 +23,25 @@ public class ClockActor : MonoBehaviour
         var input = obj.repairArea;
 
         repairArea = input;
-        stateName = obj.stateName;
     }
 
     private void Update()
     {
-        if (repairArea != null)
+        if (repairArea != null && isGrab)
         {
             var dis = (Quaternion.Angle(transform.rotation, defaultQuaternion) / 180f);
-            repairArea.SetTime(dis);
+            
+            if(!repairArea.GetIsStop()) repairArea.SetTime(dis);
+
+            Debug.Log("Repairing");
         }
     }
 
     public void OnAttachedToHand()
     {
         defaultQuaternion = transform.rotation;
+        repairArea?.OnAttachedToHand();
+        isGrab = true;
         //Debug.Log("Attached Point!!!");
 
     }
@@ -45,6 +49,8 @@ public class ClockActor : MonoBehaviour
     public void OnDetachedToHand()
     {
         defaultQuaternion = transform.rotation;
+        repairArea?.OnDetachedToHand();
+        isGrab = false;
         //Debug.Log("Detached Point!!!");
     }
     
