@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TESET : MonoBehaviour
 {
-    
+    [SerializeField] private Transform camera, anchor;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +14,19 @@ public class TESET : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var r = GetComponent<Rigidbody>();
+        var dis = camera.position - anchor.position;
+        
+        if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            transform.position += new Vector3(dis.x, 0, dis.z) * Time.deltaTime;
+            Debug.Log("work");
 
-        r.velocity = new Vector3(0,0,0);
+        }
+
+        if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+            transform.position -= new Vector3(dis.x, 0, dis.z) * Time.deltaTime;
+            Debug.Log("work");
+        }
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08050301, g: 0.099896595, b: 0.301294, a: 1}
+  m_IndirectSpecularColor: {r: 0.08034791, g: 0.09974557, b: 0.30115762, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -885,7 +885,7 @@ GameObject:
   - component: {fileID: 157210423}
   - component: {fileID: 157210422}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: TestingCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157210421}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be76e5f14cfee674cb30b491fb72b09b, type: 3}
   m_Name: 
@@ -972,7 +972,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157210421}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &157210425
 Camera:
   m_ObjectHideFlags: 0
@@ -1007,7 +1007,7 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
+  m_TargetDisplay: 7
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
@@ -1023,13 +1023,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157210421}
-  m_LocalRotation: {x: -0.022957042, y: 0.97606146, z: -0.17338957, w: -0.12927918}
-  m_LocalPosition: {x: 2.32, y: 1.203, z: 2.378}
+  m_LocalRotation: {x: 0.16709733, y: -0.29080603, z: 0.05166697, w: 0.9406598}
+  m_LocalPosition: {x: 2.01, y: 2.55, z: -1.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 20.146, y: 195.09, z: 0.001}
+  m_LocalEulerAnglesHint: {x: 20.146, y: -34.358, z: 0.001}
 --- !u!1 &165611401
 GameObject:
   m_ObjectHideFlags: 0
