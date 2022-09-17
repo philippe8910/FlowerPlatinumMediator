@@ -17575,6 +17575,7 @@ GameObject:
   - component: {fileID: 2892710205459201869}
   - component: {fileID: 2892710205459201866}
   - component: {fileID: 2892710205459201867}
+  - component: {fileID: 2892710205459201865}
   m_Layer: 7
   m_Name: CanCtrlFloor (2)
   m_TagString: Untagged
@@ -17582,6 +17583,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2892710205459201865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2892710205459201864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec028c355eecef34f9a06778893373d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &2892710205459201866
 MeshRenderer:
   m_ObjectHideFlags: 0
