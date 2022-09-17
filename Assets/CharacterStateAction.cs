@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Events;
 using Project;
 using Sirenix.OdinInspector;
+using State;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -188,6 +189,14 @@ public class CharacterStateAction : MonoBehaviour
         else
         {
             return null;
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("DeadZone"))
+        {
+            ChangeState(new DeadState());
         }
     }
 
