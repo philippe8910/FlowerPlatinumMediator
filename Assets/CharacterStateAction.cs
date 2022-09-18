@@ -196,7 +196,7 @@ public class CharacterStateAction : MonoBehaviour
     {
         if (other.CompareTag("DeadZone"))
         {
-            ChangeState(new DeadState());
+            //ChangeState(new DeadState());
         }
     }
 

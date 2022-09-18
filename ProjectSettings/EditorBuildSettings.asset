@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/DemoVserson_2/Demo1-1.unity
     guid: bc07978cc5b328149932fffc1083917d
   - enabled: 1
-    path: Assets/Scenes/DemoVserson_2/Demo1-2.unity
-    guid: f973a335d357b804ab2cb9875915d79e
+    path: Assets/Scenes/DemoVserson_2/Demo1-2Fixed.unity
+    guid: ea8e1d69d46e0744fb652f730da2702c
   - enabled: 1
     path: Assets/Scenes/DemoVserson_2/Demo1-4.unity
     guid: ed6ce5208018d9a45b3b593d9dbc5126
