@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08050301, g: 0.099896595, b: 0.301294, a: 1}
+  m_IndirectSpecularColor: {r: 0.08034791, g: 0.09974557, b: 0.30115762, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -656,7 +656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2892710205911902470, guid: 8199a9916923c3d49851e1aa0062fcef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.841
+      value: 3.847
       objectReference: {fileID: 0}
     - target: {fileID: 2892710205911902470, guid: 8199a9916923c3d49851e1aa0062fcef, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1263,7 +1263,7 @@ GameObject:
   - component: {fileID: 162690838}
   m_Layer: 6
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: DeadZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1300,7 +1300,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a4da233a80614964586ef160e7b2e946, type: 2}
+  - {fileID: 2100000, guid: 827bd71b8bef8a34ca374d0ca21a4ff5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1338,7 +1338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 162690833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.049, y: 0.165, z: 2.288}
+  m_LocalPosition: {x: 0.049, y: 0.165, z: 3.59}
   m_LocalScale: {x: 1.8621365, y: 0.06811205, z: 1.3446}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1356,8 +1356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2a53f560f74564ba29805f07a96729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultPos: {x: 0.397, y: 0.569, z: 1.835}
-  targetPos: {x: -0.579, y: 0.569, z: 1.835}
+  defaultPos: {x: 0.049, y: 0.165, z: 2.27}
+  targetPos: {x: 0.049, y: 0.165, z: 3.62}
   isEnter: 0
 --- !u!1 &165611401
 GameObject:

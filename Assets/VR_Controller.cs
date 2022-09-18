@@ -13,7 +13,7 @@ public class VR_Controller : MonoBehaviour
 
     [SerializeField] private float  grabAreaRange;
 
-    [SerializeField] private Vector3 grabOffset;
+    [SerializeField] private Vector3 grabOffset , fixedPosition;
 
     [SerializeField] private LayerMask grabbableObejctLayerMask;
 
@@ -40,6 +40,8 @@ public class VR_Controller : MonoBehaviour
 
         grabLineRenderer = transform.GetChild(0).GetComponent<LineRenderer>();
         grabTrailRenderer = transform.GetChild(0).GetComponent<TrailRenderer>();
+
+        transform.localPosition = fixedPosition;
     }
 
     private void Update()

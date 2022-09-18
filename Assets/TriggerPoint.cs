@@ -1,12 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Events;
 using Interface;
+using Project;
 using UnityEngine;
 
 public class TriggerPoint : MonoBehaviour
 {
     private bool isTrigger = false;
+
+    private bool isStop;
 
     private ITrigger ItriggerObject;
 
@@ -19,18 +23,29 @@ public class TriggerPoint : MonoBehaviour
         disTriggerMaterial = Resources.Load<Material>("TestMaterial/DisTriggerMaterial");
 
         ItriggerObject = triggerObject.GetComponent<TriggerWall>();
+        
+        
+        EventBus.Subscribe<StopTimeDetected>(OnStopTimeDetected);
+    }
+
+    private void OnStopTimeDetected(StopTimeDetected obj)
+    {
+        isStop = obj.isStop;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isTrigger)
+        if (!isStop)
         {
-            ItriggerObject.OnTriggerStayTrue();
-        }
-        else
-        {
-            ItriggerObject.OnTriggerStayFalse();
+            if (isTrigger)
+            {
+                ItriggerObject.OnTriggerStayTrue();
+            }
+            else
+            {
+                ItriggerObject.OnTriggerStayFalse();
+            }
         }
     }
 
