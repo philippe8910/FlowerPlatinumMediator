@@ -9,20 +9,20 @@ public class TriggerWall : MonoBehaviour , ITrigger
 
     public bool isEnter = false;
 
-    private float timer;
+    public float timer;
     
-    public void OnTriggerEnter()
+    public virtual void OnTriggerEnter()
     {
         
     }
 
-    public void OnTriggerStayTrue()
+    public virtual void OnTriggerStayTrue()
     {
         transform.position = Vector3.Lerp(transform.position , targetPos , 0.5f);
         timer = 0;
     }
 
-    public void OnTriggerStayFalse()
+    public virtual void OnTriggerStayFalse()
     {
         if (isEnter)
         {
@@ -40,7 +40,7 @@ public class TriggerWall : MonoBehaviour , ITrigger
 
     }
 
-    public void OnTriggerExit()
+    public virtual void OnTriggerExit()
     {
         isEnter = false;
         timer = 0;
