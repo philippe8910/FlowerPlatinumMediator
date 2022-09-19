@@ -192,12 +192,38 @@ public class CharacterStateAction : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if ((1 << collision.gameObject.layer | groundLayer) == groundLayer)
+        {
+            transform.SetParent(collision.transform);
+            //Debug.Log("Ground");
+        }
+    }
+    
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.layer == groundLayer)
+        {
+            transform.SetParent(null);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("DeadZone"))
         {
-            //ChangeState(new DeadState());
+            ChangeState(new DeadState());
+            EventBus.Post(new ChangeLevelDetected(Dead, true));
         }
+    }
+
+    private void Dead()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        
+        EventBus.ClearAllAction();
     }
 
     private void OnDrawGizmos()
