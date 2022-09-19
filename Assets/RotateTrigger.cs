@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class RotateTrigger : TriggerWall
 {
-    [SerializeField] private Quaternion defaultPos;
+    [SerializeField] private Quaternion defaultRot;
 
-    [SerializeField] private Vector3 targetPos;
+    [SerializeField] private Vector3 targetRot;
 
     private void Start()
     {
-        defaultPos = transform.rotation;
+        defaultRot = transform.rotation;
     }
 
     public override void OnTriggerEnter()
@@ -29,7 +29,7 @@ public class RotateTrigger : TriggerWall
     {
         if (isEnter)
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation , defaultPos , 0.1f);
+            transform.rotation = Quaternion.Lerp(transform.rotation , defaultRot , 0.1f);
         }
         else
         {
@@ -44,7 +44,7 @@ public class RotateTrigger : TriggerWall
 
     public override void OnTriggerStayTrue()
     {
-        transform.rotation = Quaternion.Lerp(transform.rotation , Quaternion.Euler(targetPos) , 0.1f);
+        transform.rotation = Quaternion.Lerp(transform.rotation , Quaternion.Euler(targetRot) , 0.1f);
         timer = 0;
     }
 }
