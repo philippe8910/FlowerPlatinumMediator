@@ -54,16 +54,8 @@ public class CharacterStateAction : MonoBehaviour
         if(rightRay == null) rightRay = GameObject.Find("RightRay");
         if(leftRay == null) leftRay = GameObject.Find("LeftRay");
         if (stopTimeCameraEffect == null) FindObjectOfType<Volume>();
-        
-        EventBus.Subscribe<JoystickInputDetected>(OnJoystickInputDetected);
     }
-
-    private void OnJoystickInputDetected(JoystickInputDetected obj)
-    {
-        var input = obj.input;
-
-        inputVector2 = input;
-    }
+    
 
     // Update is called once per frame
     void Update()
@@ -143,7 +135,7 @@ public class CharacterStateAction : MonoBehaviour
 
     public Vector2 GetInputVector2()
     {
-        return inputVector2;
+        return playerControllerAction.GetInput();
     }
 
     public CharacterActor characterActor()
