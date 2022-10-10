@@ -19,7 +19,7 @@ public class VR_Controller : MonoBehaviour
 
     private bool isGrab;
 
-    private Grabbable targetGrabbable;
+    //private Grabbable targetGrabbable;
 
     private Vector3 grabObjectVector3;
 
@@ -56,9 +56,9 @@ public class VR_Controller : MonoBehaviour
                 grabObjectVector3 = GetGrabObjectTransform().position;
                 grabTrailRenderer.enabled = false;
 
-                targetGrabbable = GetGrabObjectTransform().GetComponent<Grabbable>();
-                targetGrabbable.EnterGrab(transform);
-                Debug.Log(targetGrabbable);
+                //targetGrabbable = GetGrabObjectTransform().GetComponent<Grabbable>();
+                //targetGrabbable.EnterGrab(transform);
+                //Debug.Log(targetGrabbable);
             }
         }
         else
@@ -80,16 +80,16 @@ public class VR_Controller : MonoBehaviour
     {
         if (isGrab)
         {
-            SetGrabLineRender(transform.position , targetGrabbable.transform.position);
+            //SetGrabLineRender(transform.position , targetGrabbable.transform.position);
             
-            targetGrabbable.Grab();
-            targetGrabbable.SetLerpVector(transform.position , transform.rotation);
+            //targetGrabbable.Grab();
+            //targetGrabbable.SetLerpVector(transform.position , transform.rotation);
         }
         else
         {
             SetGrabLineRender(grabObjectVector3 , grabObjectVector3);
             
-            targetGrabbable?.UnGrab();
+            //targetGrabbable?.UnGrab();
         }
     }
 

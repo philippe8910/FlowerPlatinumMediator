@@ -36,9 +36,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - HandPlayer
+  - Hand
+  - Grabbing
   m_SortingLayers:
   - name: Default
     uniqueID: 0
