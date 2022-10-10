@@ -196,7 +196,7 @@ public class CharacterStateAction : MonoBehaviour
     {
         if ((1 << collision.gameObject.layer | groundLayer) == groundLayer)
         {
-            transform.SetParent(collision.transform);
+            //transform.SetParent(collision.transform);
             //Debug.Log("Ground");
         }
     }
@@ -205,7 +205,7 @@ public class CharacterStateAction : MonoBehaviour
     {
         if (collision.gameObject.layer == groundLayer)
         {
-            transform.SetParent(null);
+            //transform.SetParent(null);
         }
     }
 
@@ -222,7 +222,7 @@ public class CharacterStateAction : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
-        
+        Destroy(playerControllerAction.gameObject);
         EventBus.ClearAllAction();
     }
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4682858868746464055}
   - component: {fileID: 4682858868746464052}
   - component: {fileID: 4682858868746464048}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: OnceBreakBridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,9 +27,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4682858868746464053}
-  m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -2.6, y: 1.825, z: 3.11}
-  m_LocalScale: {x: 0.3746, y: 0.01497387, z: 2.2529}
+  m_LocalScale: {x: 0.73777467, y: 0.01497387, z: 1.5090824}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

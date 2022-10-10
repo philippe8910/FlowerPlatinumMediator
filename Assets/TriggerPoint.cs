@@ -5,6 +5,7 @@ using Events;
 using Interface;
 using Project;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TriggerPoint : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class TriggerPoint : MonoBehaviour
     private bool isStop;
 
     private ITrigger ItriggerObject;
+
+    [SerializeField] private UnityEvent OnTriggerEnterDetected;
 
     [SerializeField] private GameObject triggerObject;
 
@@ -41,6 +44,7 @@ public class TriggerPoint : MonoBehaviour
             if (isTrigger)
             {
                 ItriggerObject.OnTriggerStayTrue();
+                OnTriggerEnterDetected.Invoke();
             }
             else
             {
