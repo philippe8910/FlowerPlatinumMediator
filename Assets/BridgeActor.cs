@@ -23,16 +23,16 @@ public class BridgeActor : MonoBehaviour , ITimeController
     
     public void OnGrabTime()
     {
-        
+        Debug.Log(transform.name +  " : On Grab!!!");
     }
 
     public void OnRotateTime()
     {
-        
+        Debug.Log(transform.name +  " : On Rotate!!!");
     }
 
     public void OnReleaseTime()
     {
-        
+        Debug.Log(transform.name +  " : On Release!!!");
     }
 }
