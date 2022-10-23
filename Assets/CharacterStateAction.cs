@@ -62,7 +62,8 @@ public class CharacterStateAction : MonoBehaviour
     {
         currentState.OnStayState(this);
 
-        if (playerControllerAction.GetDropdropDoppelgangerAction() && anchor == null)
+        /*
+         * if (playerControllerAction.GetDropdropDoppelgangerAction() && anchor == null)
         {
             Debug.Log("Press");
             
@@ -88,6 +89,8 @@ public class CharacterStateAction : MonoBehaviour
                 Debug.Log("StopTime");
             }
         }
+         */
+         
 
         //Debug.Log("Right : " + GetRightSideClimbWallCheck());
         //Debug.Log("Left : " + GetLeftSideClimbWallCheck());

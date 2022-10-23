@@ -39,12 +39,12 @@ public class PlayerControllerAction : MonoBehaviour
         if (isComputer)
         {
 //            Debug.Log(new Vector2(Input.GetAxisRaw("Horizontal") , Input.GetAxisRaw("Vertical")));
-            EventBus.Post(new JoystickInputDetected(new Vector2(Input.GetAxisRaw("Horizontal") , Input.GetAxisRaw("Vertical"))));
+            //EventBus.Post(new JoystickInputDetected(new Vector2(Input.GetAxisRaw("Horizontal") , Input.GetAxisRaw("Vertical"))));
         }
         else
         {
 //            Debug.Log(touchpadPos.axis);
-            EventBus.Post(new JoystickInputDetected(touchpadPos.axis));
+            //EventBus.Post(new JoystickInputDetected(touchpadPos.axis));
         }
     }
 
